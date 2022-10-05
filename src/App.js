@@ -12,7 +12,7 @@ import { Provider } from "react-redux";
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename={process.env.PRUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<MainPage />} />
 
