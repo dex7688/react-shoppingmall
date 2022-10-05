@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-shoppingmall/static/css/main.b5ef01ab.css",
+    "main.js": "/react-shoppingmall/static/js/main.bb61d4b1.js",
+    "static/js/787.229e5873.chunk.js": "/react-shoppingmall/static/js/787.229e5873.chunk.js",
+    "static/media/NotoSansKR-Medium.otf": "/react-shoppingmall/static/media/NotoSansKR-Medium.56207b5e52841342a21b.otf",
+    "static/media/NotoSansKR-Regular.otf": "/react-shoppingmall/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
+    "static/media/NotoSansKR-Light.otf": "/react-shoppingmall/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
+    "static/media/img_shop_grocery.jpeg": "/react-shoppingmall/static/media/img_shop_grocery.d2ca048b63470af4083d.jpeg",
+    "static/media/img_shop_fashion.jpeg": "/react-shoppingmall/static/media/img_shop_fashion.ef1e1bbbfaadbf0ecb0e.jpeg",
+    "static/media/img_shop_digital.jpeg": "/react-shoppingmall/static/media/img_shop_digital.0c55b1eb03ed9f894601.jpeg",
+    "index.html": "/react-shoppingmall/index.html",
+    "main.b5ef01ab.css.map": "/react-shoppingmall/static/css/main.b5ef01ab.css.map",
+    "main.bb61d4b1.js.map": "/react-shoppingmall/static/js/main.bb61d4b1.js.map",
+    "787.229e5873.chunk.js.map": "/react-shoppingmall/static/js/787.229e5873.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5ef01ab.css",
+    "static/js/main.bb61d4b1.js"
+  ]
+}
