@@ -11,11 +11,8 @@ import { Provider } from "react-redux";
 
 function App() {
   return (
-    <Provider
-      store={store}
-      basename={"http://dex7688.github.io/react-shoppingmall"}
-    >
-      <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter basename={"http://dex7688.github.io/react-shoppingmall"}>
         <Routes>
           <Route path="/" element={<MainPage />} />
 
