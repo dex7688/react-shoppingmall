@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "NotoSans", sans-serif;
+}
+@font-face {
+  font-family: "NotoSans";
+  font-weight: "normal";
+  src: url("/src/font/NotoSansKR-Medium.otf");
+  font-display: fallback;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 764px;
+  padding-top: 64px;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 200%;
+  height: 700px;
+
+  display: flex;
+  transform: translateX(0vw);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  background-color: #0000001a;
+}
+
+.item {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.textContainer {
+  position: absolute;
+  max-width: 1360px;
+  width: 100%;
+  height: 140px;
+  padding: 0 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 33.333333%;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  z-index: 20;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: rgb(255 255 255 / 1);
+  font-weight: 700;
+  text-align: left;
+  text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.description {
+  margin: 0.5rem 0;
+  color: rgb(255 255 255 / 1);
+  text-align: left;
+}
+
+.goButton {
+  display: block;
+  text-decoration: none;
+  height: 3rem;
+  padding: 0 1rem;
+  margin-top: 0.75rem;
+  min-height: 3rem;
+  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+
+  display: inline-flex;
+  cursor: pointer;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(61, 68, 81);
+  border: 1px solid rgb(61, 68, 81);
+  border-radius: 8px;
+}
+
+.goButton:hover {
+  background-color: rgb(48, 54, 64);
+  border-color: rgb(48, 54, 64);
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.goIcon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.img {
+  display: block;
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  height: 700px;
+  padding: 5px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.prevButton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 700px;
+  padding: 5px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nextButton:hover,
+.prevButton:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease-in;
+}
+
+.nextButton:hover .buttonIcon,
+.prevButton:hover .buttonIcon {
+  fill: #fff;
+  transition: all 0.25s ease-in;
+}
+
+.buttonIcon {
+  display: block;
+  font-size: 22px;
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.dotContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 8px;
+
+  background: #fff;
+  border-radius: 100%;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.dot:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+
+.selected {
+  opacity: 1;
+}

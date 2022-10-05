@@ -1,0 +1,228 @@
+/* nav */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "NotoSans", "sans-serif";
+}
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: "normal";
+  src: url("/src/font/NotoSansKR-Medium.otf");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "NotoSansLight";
+  font-weight: "normal";
+  src: url("/src/font/NotoSansKR-Light.otf");
+  font-display: fallback;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  background-color: rgb(255 255 255 / 1);
+  z-index: 999;
+}
+
+.nav {
+  max-width: 1360px;
+  height: 48px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLeft {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkLogo {
+  margin-left: 0.5rem;
+  margin-right: 0.8rem;
+  text-decoration: none;
+  color: rgb(55 65 81 / 1);
+}
+
+.logo {
+  font-size: 1.125rem;
+  width: 104px;
+  line-height: 1.75rem;
+}
+
+.navText {
+  display: block;
+  height: 2rem;
+  min-height: 2rem;
+  line-height: 2rem;
+
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  color: rgb(55 65 81 / 1);
+  cursor: pointer;
+}
+
+.navText:hover {
+  background-color: hsl(215 28% 17% / 0.2);
+  border-radius: 8px;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navRight {
+  width: auto;
+  height: 48px;
+  display: flex;
+  gap: 3px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLight {
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.iconMoon {
+  width: 100%;
+  height: 100%;
+}
+
+.dropDown {
+  position: relative;
+}
+
+.input {
+  display: block;
+  width: 183px;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 0.875rem;
+  line-height: 2;
+  color: rgb(31 41 55 / 1);
+  outline: 0;
+  border: 1px solid hsl(215 28% 17% / 0);
+  background-color: rgb(209 213 219 / 1);
+  border-radius: 0.25rem;
+}
+
+.dropDown:focus-within > .searchList {
+  display: block !important;
+}
+
+.searchList {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 16rem;
+  max-height: 24rem;
+  top: 3.5rem;
+  left: 0px;
+  z-index: 9999;
+  background-color: rgb(255, 255, 255);
+  display: none;
+}
+
+.searchInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  list-style: none;
+}
+
+.searchLink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+}
+
+.searchLink:hover {
+  background-color: rgba(31, 41, 55, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.searchItem {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(31, 41, 55);
+  font-family: "NotoSansLight";
+}
+
+.iconCartWrapper {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 0 16px;
+  margin-left: 4px;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.iconCartWrapper:hover {
+  background-color: hsl(215 28% 17% / 0.2);
+  border-radius: 8px;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconCart {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 23px;
+  height: 20px;
+  padding: 0.25rem 0.5rem;
+
+  color: rgb(229 232 235 / 1);
+  font-weight: 700;
+  font-size: 0.75rem;
+  background-color: rgb(239 68 68 / 1);
+  border-radius: 9999px;
+}

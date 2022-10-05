@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "NotoSans", sans-serif;
+}
+@font-face {
+  font-family: "NotoSans";
+  font-weight: "normal";
+  src: url("/src/font/NotoSansKR-Medium.otf");
+  font-display: fallback;
+}
+
+.footer {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: rgb(249, 250, 251);
+  border-color: rgb(229, 231, 235);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.zerobase {
+  text-decoration: none;
+  color: rgb(31, 41, 55);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 24px;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
+.facebook {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.instargram {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.github {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgb(31, 41, 55);
+}
