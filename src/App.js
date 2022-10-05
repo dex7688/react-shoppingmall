@@ -10,11 +10,9 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 
 function App() {
-  // const PRUBLIC_URL = "http://dex7688.github.io/react-shoppingmall";
-
   return (
     <Provider store={store}>
-      <BrowserRouter basename="/react-shoppingmall">
+      <BrowserRouter basename={process.env.PRUBLIC_URL}>
         <Routes>
           <Route path="/" element={<MainPage />} />
 
