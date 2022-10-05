@@ -14,7 +14,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route exact path="/" element={<MainPage />} />
 
           <Route path="/fashion" element={<FashionPage />} />
           <Route path={"/products/:docId"} element={<ItemPage />} />
