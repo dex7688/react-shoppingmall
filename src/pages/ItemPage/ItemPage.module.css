@@ -1,26 +1,7 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "NotoSans", sans-serif;
-}
-@font-face {
-  font-family: "NotoSans";
-  font-weight: "normal";
-  src: url("/src/font/NotoSansKR-Medium.otf");
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: "NotoSansLight";
-  font-weight: "normal";
-  src: url("/src/font/NotoSansKR-Regular.otf");
-  font-display: fallback;
-}
-
 .container {
   padding-top: 4rem;
   min-height: calc(100vh - 4rem - 224px);
+  font-family: 'NotoSans', sans-serif;
 }
 
 .inner {
@@ -35,7 +16,6 @@
   overflow-x: auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -45,14 +25,14 @@
 .fashion {
   display: flex;
   align-items: center;
-  font-family: "NotoSansLight";
+  font-family: 'NotoSansLight';
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
 }
 
 .fashion::after {
-  content: "";
+  content: '';
   margin-left: 0.5rem;
   margin-right: 0.75rem;
   display: block;
@@ -69,19 +49,18 @@
 .itemTitle {
   display: flex;
   align-items: center;
-  font-family: "NotoSansLight";
+  font-family: 'NotoSansLight';
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
   font-weight: 100;
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
 }
 
 .itemWrapper {
   padding-left: 0;
   padding-right: 0;
   margin-top: 3.5rem;
-
   display: flex;
   align-items: center;
 }
@@ -89,7 +68,7 @@
 .itemImg {
   min-width: 20em;
   padding: 1rem 1rem;
-  background-color: rgb(255 255 255 / 1);
+  background-color: rgb(255 255 255);
   border-radius: 1rem;
   overflow: hidden;
   flex-shrink: 0;
@@ -117,11 +96,12 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+  color: var(--color-text);
 }
 
 .description {
   flex-grow: 1;
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
 }
 
 .starRating {
@@ -146,7 +126,7 @@
   mask-repeat: no-repeat;
   mask-position: left;
   -webkit-appearance: none;
-  mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTgwcHgiIHZpZXdCb3g9IjAgMCAxOTIgMTgwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3Rhci0yPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9InN0YXItMiIgZmlsbD0iIzAwMDAwMCIgcG9pbnRzPSI5NiAxNTMuMDQzNjYxIDM3LjIyMTQ3NDggMTc5LjI4NjUwNiA0NC4yNDExOTA0IDExNS43NzQ0NDQgMC44OTQzNDgzNyA2OC40ODEzNTE1IDY0LjAxMTI5NjUgNTUuNDcxNTgyOCA5NiAwIDEyNy45ODg3MDQgNTUuNDcxNTgyOCAxOTEuMTA1NjUyIDY4LjQ4MTM1MTUgMTQ3Ljc1ODgxIDExNS43NzQ0NDQgMTU0Ljc3ODUyNSAxNzkuMjg2NTA2Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==");
+  mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTgwcHgiIHZpZXdCb3g9IjAgMCAxOTIgMTgwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3Rhci0yPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9InN0YXItMiIgZmlsbD0iIzAwMDAwMCIgcG9pbnRzPSI5NiAxNTMuMDQzNjYxIDM3LjIyMTQ3NDggMTc5LjI4NjUwNiA0NC4yNDExOTA0IDExNS43NzQ0NDQgMC44OTQzNDgzNyA2OC40ODEzNTE1IDY0LjAxMTI5NjUgNTUuNDcxNTgyOCA5NiAwIDEyNy45ODg3MDQgNTUuNDcxNTgyOCAxOTEuMTA1NjUyIDY4LjQ4MTM1MTUgMTQ3Ljc1ODgxIDExNS43NzQ0NDQgMTU0Ljc3ODUyNSAxNzkuMjg2NTA2Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==');
 }
 
 .starIcon2 {
@@ -160,11 +140,12 @@
   mask-repeat: no-repeat;
   mask-position: right;
   -webkit-appearance: none;
-  mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTgwcHgiIHZpZXdCb3g9IjAgMCAxOTIgMTgwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3Rhci0yPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9InN0YXItMiIgZmlsbD0iIzAwMDAwMCIgcG9pbnRzPSI5NiAxNTMuMDQzNjYxIDM3LjIyMTQ3NDggMTc5LjI4NjUwNiA0NC4yNDExOTA0IDExNS43NzQ0NDQgMC44OTQzNDgzNyA2OC40ODEzNTE1IDY0LjAxMTI5NjUgNTUuNDcxNTgyOCA5NiAwIDEyNy45ODg3MDQgNTUuNDcxNTgyOCAxOTEuMTA1NjUyIDY4LjQ4MTM1MTUgMTQ3Ljc1ODgxIDExNS43NzQ0NDQgMTU0Ljc3ODUyNSAxNzkuMjg2NTA2Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==");
+  mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTgwcHgiIHZpZXdCb3g9IjAgMCAxOTIgMTgwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3Rhci0yPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9InN0YXItMiIgZmlsbD0iIzAwMDAwMCIgcG9pbnRzPSI5NiAxNTMuMDQzNjYxIDM3LjIyMTQ3NDggMTc5LjI4NjUwNiA0NC4yNDExOTA0IDExNS43NzQ0NDQgMC44OTQzNDgzNyA2OC40ODEzNTE1IDY0LjAxMTI5NjUgNTUuNDcxNTgyOCA5NiAwIDEyNy45ODg3MDQgNTUuNDcxNTgyOCAxOTEuMTA1NjUyIDY4LjQ4MTM1MTUgMTQ3Ljc1ODgxIDExNS43NzQ0NDQgMTU0Ljc3ODUyNSAxNzkuMjg2NTA2Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==');
 }
 
 .rate {
   margin-left: 0.5rem;
+  color: var(--color-text);
 }
 
 .btnInner {
@@ -180,7 +161,7 @@
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   flex-grow: 1;
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
 }
 
 .addCart {
@@ -224,13 +205,12 @@
   min-height: 3rem;
   font-weight: 600;
   text-align: center;
-  color: rgb(31, 41, 55);
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgb(31, 41, 55);
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg);
+  border: 1px solid var(--color-btn-border);
   border-radius: 0.5rem;
   cursor: pointer;
   text-decoration: none;
-
   display: inline-flex;
   flex-shrink: 0;
   user-select: none;
@@ -241,10 +221,10 @@
 }
 
 .goCart:hover {
-  color: rgb(255, 255, 255);
+  color: var(--color-btn-hover-text);
   outline: none;
-  background-color: rgb(31, 41, 55);
-  border: 1px solid rgb(31, 41, 55);
+  background-color: var(--color-btn-text);
+  border: 1px solid var(--color-btn-text);
   transition: all 0.25s ease-out;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

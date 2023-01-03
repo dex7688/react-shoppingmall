@@ -1,13 +1,74 @@
-body {
+:root {
+  --color-text: rgb(31, 41, 55);
+  --color-item-bg: rgb(243 244 246);
+  --color-item-border: rgb(229 231 235);
+  --color-nav-bg: rgb(255, 255, 255);
+  --color-nav-text: rgb(55 65 81);
+  --color-nav-text-hover: rgba(31, 41, 55, 0.2);
+  --color-nav-input-bg: rgb(209 213 219);
+  --color-searchList-bg: rgb(255, 255, 255);
+  --color-searchList-hover: rgba(31, 41, 55, 0.1);
+  --color-footer-bg: rgb(249, 250, 251);
+  --color-cart-img: rgb(255, 255, 255);
+  --color-modal-bg: rgba(48, 54, 64, 0.4);
+  --color-btn-text: rgb(31, 41, 55);
+  --color-btn-bg: rgba(0, 0, 0, 0);
+  --color-btn-border: rgb(31, 41, 55);
+  --color-btn-hover: rgb(255, 255, 255);
+  --color-btn-hover-text: rgb(255, 255, 255);
+}
+
+html.dark {
+  background-color: rgb(42, 48, 60);
+  --color-text: rgb(166, 173, 186);
+  --color-item-bg: rgb(55, 65, 81);
+  --color-item-border: rgb(31, 41, 55);
+  --color-nav-bg: rgb(25, 29, 36);
+  --color-nav-text: rgb(255, 255, 255);
+  --color-nav-text-hover: rgba(166, 173, 186, 0.2);
+  --color-nav-input-bg: rgb(75, 85, 99);
+  --color-searchList-bg: rgb(75, 85, 99);
+  --color-searchList-hover: rgba(166, 173, 186, 0.1);
+  --color-footer-bg: rgb(36, 41, 51);
+  --color-btn-text: rgb(166, 173, 186);
+  --color-btn-bg: rgba(0, 0, 0, 0);
+  --color-btn-border: rgb(166, 173, 186);
+  --color-btn-hover: rgb(166, 173, 186);
+  --color-btn-hover-text: rgb(42, 48, 60);
+}
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: Noto Sans KR, sans-serif, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: Noto Sans KR, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+  font-family: 'NotoSans', 'sans-serif';
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* font */
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 'normal';
+  src: url('/src/font/NotoSansKR-Medium.otf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'NotoSansLight';
+  font-weight: 'normal';
+  src: url('/src/font/NotoSansKR-Light.otf');
+  font-display: fallback;
 }

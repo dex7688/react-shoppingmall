@@ -1,13 +1,11 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "NotoSans", sans-serif;
+  font-family: 'NotoSans', sans-serif;
 }
+
 @font-face {
-  font-family: "NotoSans";
-  font-weight: "normal";
-  src: url("/src/font/NotoSansKR-Medium.otf");
+  font-family: 'NotoSans';
+  font-weight: 'normal';
+  src: url('/src/font/NotoSansKR-Medium.otf');
   font-display: fallback;
 }
 
@@ -29,7 +27,7 @@
 }
 
 .container::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100vw;
   height: 100%;

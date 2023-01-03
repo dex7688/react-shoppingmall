@@ -1,4 +1,4 @@
-import { ADD_CART, REMOVE_CART } from "./types";
+import { ADD_CART, REMOVE_CART } from './types';
 
 export const addCart = (selectProduct) => {
   return {
@@ -7,8 +7,9 @@ export const addCart = (selectProduct) => {
   };
 };
 
-export const removeCart = () => {
+export const removeCart = (selectProduct) => {
   return {
     type: REMOVE_CART,
+    payload: selectProduct,
   };
 };

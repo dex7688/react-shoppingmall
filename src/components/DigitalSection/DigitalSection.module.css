@@ -1,34 +1,29 @@
-/* 쥬얼리 */
+/* 디지털 */
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "NotoSans", sans-serif;
-}
-@font-face {
-  font-family: "NotoSans";
-  font-weight: "normal";
-  src: url("/src/font/NotoSansKR-Medium.otf");
-  font-display: fallback;
-}
-
-.jewelry {
+.digital {
   position: relative;
   max-width: 1360px;
   width: 100%;
-
   padding: 3rem 0.5rem 2rem;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 5rem;
+  font-family: 'NotoSans', sans-serif;
 }
 
-.jewelryTitle {
+.loading {
+  width: 100%;
+  height: 502px;
+  background-color: var(--color-item-bg);
+}
+
+.digitalTitle {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
+  color: var(--color-text);
 }
 
 .itemsContainer {
@@ -39,12 +34,11 @@
 
 .item {
   position: relative;
-  border: 1px solid rgb(229 231 235 / 1);
+  border: 1px solid var(--color-item-border);
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
-
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +46,6 @@
 .itemImageWrapper {
   height: 20rem;
   background-color: rgb(255, 255, 255);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,11 +66,9 @@
 
 .itemInfo {
   padding: 2rem;
-  background-color: rgb(243 244 246 / 1);
-
+  background-color: var(--color-item-bg);
   display: flex;
   flex-direction: column;
-
   gap: 0.5rem;
   flex: 1 1 auto;
 }
@@ -85,17 +76,16 @@
 .itemName {
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(31, 41, 55);
   line-height: 1.5rem;
   margin-bottom: 0.75rem;
+  color: var(--color-text);
 }
 
 .itemPrice {
   font-size: 1rem;
   line-height: 1.5rem;
-  color: rgb(31, 41, 55);
   flex-grow: 1;
-
   display: flex;
   align-items: flex-end;
+  color: var(--color-text);
 }

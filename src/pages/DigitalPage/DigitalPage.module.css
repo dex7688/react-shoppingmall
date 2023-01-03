@@ -1,16 +1,3 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "NotoSans", sans-serif;
-}
-@font-face {
-  font-family: "NotoSans";
-  font-weight: "normal";
-  src: url("/src/font/NotoSansKR-Medium.otf");
-  font-display: fallback;
-}
-
 .sectionPage {
   position: relative;
   max-width: 1360px;
@@ -20,14 +7,13 @@
   padding-right: 0.5rem;
   padding-bottom: 2rem;
   margin: 64px auto 0;
+  font-family: 'NotoSans', sans-serif;
 }
 
 .navigation {
   display: flex;
   align-items: center;
   max-width: 100%;
-  font-family: "NotoSans";
-
   overflow-x: auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -38,10 +24,11 @@
   line-height: 1.25rem;
   display: flex;
   align-items: center;
+  color: var(--color-text);
 }
 
 .home::after {
-  content: "";
+  content: '';
   margin-left: 0.5rem;
   margin-right: 0.75rem;
   display: block;
@@ -53,6 +40,7 @@
   border-right: 1px solid;
   background: transparent;
   margin-top: 0.1rem;
+  color: var(--color-text);
 }
 
 .selected {
@@ -60,6 +48,7 @@
   line-height: 1.25rem;
   display: flex;
   align-items: center;
+  color: var(--color-text);
 }
 
 .itemContainer {
@@ -78,6 +67,7 @@
   margin-bottom: 2rem;
   font-weight: 700;
   text-align: center;
+  color: var(--color-text);
 }
 
 .itemList {
@@ -88,12 +78,11 @@
 
 .item {
   position: relative;
-  border: 1px solid rgb(229 231 235 / 1);
+  border: 1px solid var(--color-item-border);
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
-
   display: flex;
   flex-direction: column;
 }
@@ -101,7 +90,6 @@
 .itemImageWrapper {
   height: 20rem;
   background-color: rgb(255, 255, 255);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +110,7 @@
 
 .itemInfo {
   padding: 2rem;
-  background-color: rgb(243 244 246 / 1);
+  background-color: var(--color-item-bg);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -132,18 +120,15 @@
 .itemName {
   font-size: 1rem;
   font-weight: 600;
-  font-family: "NotoSans", sans-serif;
-
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
   line-height: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 .itemPrice {
   font-size: 1rem;
-  font-family: "NotoSans", sans-serif;
   line-height: 1.5rem;
-  color: rgb(31, 41, 55);
+  color: var(--color-text);
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
