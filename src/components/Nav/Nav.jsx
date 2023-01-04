@@ -28,9 +28,24 @@ export default function Nav() {
     } else {
       document.documentElement.classList.add('dark');
     }
-
     localStorage.setItem('theme', dark);
   }, [dark]);
+
+  useEffect(() => {
+    if (slide) {
+      document.body.style.cssText = `
+      position: fixed;
+      top: ${window.scrollY}px;
+      overflow-y: scroll;
+      width: 100%;`;
+    }
+
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    };
+  }, [slide]);
 
   // 검색 창 필터 구현
   const handleInputChange = (e) => {
@@ -61,19 +76,26 @@ export default function Nav() {
     slideRef.current.style.transform = 'translateX(0)';
   };
 
+  const handleOverlayClick = () => {
+    setSlide(false);
+    slideRef.current.style.transform = 'translateX(-100%)';
+  };
+
   return (
     <nav className={styles.container}>
       <div className={styles.slidesMenu} ref={slideRef}>
-        <Link to='/fashion' className={styles.navText}>
+        <Link to='/fashion' className={styles.navText} onClick={handleOverlayClick}>
           패션
         </Link>
-        <Link to='/accessory' className={styles.navText}>
+        <Link to='/accessory' className={styles.navText} onClick={handleOverlayClick}>
           악세서리
         </Link>
-        <Link to='/digital' className={styles.navText}>
+        <Link to='/digital' className={styles.navText} onClick={handleOverlayClick}>
           디지털
         </Link>
       </div>
+      {slide && <div className={styles.overlay} onClick={handleOverlayClick}></div>}
+
       <div className={styles.nav}>
         <div className={styles.navLeft}>
           <span className={styles.burgerWrapper} onClick={handleSlideClick}>
@@ -82,13 +104,13 @@ export default function Nav() {
           <Link to='/' className={styles.linkLogo}>
             <h1 className={styles.logo}>React Shop</h1>
           </Link>
-          <Link to='/fashion' className={styles.navText}>
+          <Link to='/fashion' className={`${styles.navText} ${styles.navBig}`}>
             패션
           </Link>
-          <Link to='/accessory' className={styles.navText}>
+          <Link to='/accessory' className={`${styles.navText} ${styles.navBig}`}>
             악세서리
           </Link>
-          <Link to='/digital' className={styles.navText}>
+          <Link to='/digital' className={`${styles.navText} ${styles.navBig}`}>
             디지털
           </Link>
         </div>

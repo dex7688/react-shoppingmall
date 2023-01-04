@@ -68,29 +68,23 @@
 
 .cartItem {
   margin-top: 1rem;
-  /* color: rgb(29, 66, 119); */
   display: flex;
   align-items: center;
 }
 
 .imageWrapper {
   display: block;
-  max-width: 100%;
-  width: 14rem;
-
-  padding: 1rem 1rem;
-  margin: 0;
+  padding: 1rem;
   background-color: rgb(255, 255, 255);
   border-radius: 1rem;
-  overflow: hidden;
 }
 
 .itemImage {
-  display: block;
-  object-fit: contain;
-  max-width: 100%;
-  width: 100%;
+  /* display: block; */
+  /* max-width: 100%; */
+  width: 12rem;
   height: 12rem;
+  object-fit: contain;
   cursor: pointer;
   background-color: var(--color-cart-img);
 }
@@ -444,4 +438,21 @@
 .cancelBtn:active:hover {
   animation: none;
   transform: scale(0.95, 0.95);
+}
+
+@media (max-width: 992px) {
+  .cartInner {
+    flex-direction: column;
+  }
+
+  .buyInner {
+    align-self: end;
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .cartItem {
+    flex-direction: column;
+  }
 }

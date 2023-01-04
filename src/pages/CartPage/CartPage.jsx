@@ -3,7 +3,7 @@ import styles from './CartPage.module.css';
 import ScrollTop from '../../ScrollTop';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addCart, removeCart } from '../../redux/cart/actions';
+import { addCart, removeCart, clearCart } from '../../redux/cart/actions';
 import { useEffect } from 'react';
 
 export default function CartPage(props) {
@@ -20,8 +20,7 @@ export default function CartPage(props) {
 
   const handleModalBuyClick = () => {
     setModal(false);
-    localStorage.removeItem('cart');
-    props.addCart({});
+    dispatch(clearCart());
   };
 
   const handleModalCancelClick = () => {

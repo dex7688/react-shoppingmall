@@ -1,9 +1,11 @@
-import { ADD_CART, REMOVE_CART } from './types';
+import { ADD_CART, REMOVE_CART, CLEAR_CART } from './types';
 
 const getCartListFromLocalStorage = JSON.parse(localStorage.getItem('carts'));
+
 const initialState = {
   carts: getCartListFromLocalStorage ? getCartListFromLocalStorage : [],
 };
+
 // img, id, title, price, count
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -44,6 +46,12 @@ const cartReducer = (state = initialState, action) => {
         carts: removed.filter((el) => el.count !== 0),
       };
     }
+
+    case CLEAR_CART:
+      return {
+        carts: [],
+      };
+
     default:
       return state;
   }
