@@ -85,7 +85,6 @@
   width: 12rem;
   height: 12rem;
   object-fit: contain;
-  cursor: pointer;
   background-color: var(--color-cart-img);
 }
 
@@ -106,7 +105,6 @@
 
 .itemTitleText {
   text-decoration: none;
-  cursor: pointer;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;

@@ -16,6 +16,7 @@
   overflow-x: auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -67,6 +68,7 @@
 
 .itemImg {
   min-width: 20em;
+  /* width: 100%; */
   padding: 1rem 1rem;
   background-color: rgb(255 255 255);
   border-radius: 1rem;
@@ -227,4 +229,20 @@
   border: 1px solid var(--color-btn-text);
   transition: all 0.25s ease-out;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 992px) {
+  .itemWrapper {
+    flex-direction: column;
+  }
+
+  .itemImg {
+    min-width: 20em;
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: rgb(255 255 255);
+    border-radius: 1rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
 }

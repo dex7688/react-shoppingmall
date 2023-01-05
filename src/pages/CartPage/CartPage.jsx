@@ -70,14 +70,12 @@ export default function CartPage(props) {
               {carts.length !== 0 ? (
                 carts.map((data) => (
                   <div className={styles.cartItem} key={data.title}>
-                    <Link className={styles.imageWrapper} to={`/products/${data.id}`}>
+                    <div className={styles.imageWrapper}>
                       <img src={`${data.image}`} alt='product' className={styles.itemImage} />
-                    </Link>
+                    </div>
                     <div className={styles.productInfo}>
                       <h2 className={styles.itemTitle}>
-                        <Link to={`/products/${data.id}`} className={styles.itemTitleText}>
-                          {data.title}
-                        </Link>
+                        <div className={styles.itemTitleText}>{data.title}</div>
                       </h2>
                       <p className={styles.itemPrice}>{`$ ${Math.round(data.price * data.count)}`}</p>
 
